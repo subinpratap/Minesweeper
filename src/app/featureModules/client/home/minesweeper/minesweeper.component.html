@@ -1,0 +1,48 @@
+<app-avatar-selector *ngIf="!showGame" (avatarSelected)="showGameFn($event)"></app-avatar-selector>
+
+<section class="mineSweeperContainerWrapper" *ngIf="showGame && mineSweeperArray">
+  <h1 class="heading">Minesweeper</h1>
+
+  <div class="mineSweeperAndScorecardContainer">
+    <div class="mineSweeperContainer">
+      <div class="gameInfoContainer gameInfo">
+        <div class="gameInfo__level">
+          <mat-form-field>
+            <mat-select [(value)]="selectedLevel" (selectionChange)="changeDifficulty($event)" name="Level">
+              <mat-option *ngFor="let level of levels" [value]="level">
+                {{level}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="avatar">
+          <img src='{{ "../../../../assets//images/avatar/av-" + avatarId + ".jpeg" }}' alt="avatar"> 
+        </div>
+        <div class="gameInfo__stopwatch">
+          <span class="score">Score: {{ score }}</span>
+          <span>
+            <span>{{ timeValue }}</span>
+            <i class="icon stopwatch"></i>
+          </span>
+        </div>
+
+      </div>
+
+      <div class="mineSweeper">
+        <ul class="mineSweeper__list" *ngFor="let array of mineSweeperArray">
+          <li class="mineSweeper__list__items" *ngFor="let arr of array">
+            <app-tiles [tileInfo]="arr" (revealTile)="revealTile($event)"></app-tiles>
+          </li>
+        </ul>
+      </div>
+
+      <div class="resetContainer">
+        <button mat-button (click)="reset()">Start Again</button>
+      </div>
+    </div>
+
+    <div class="scoreCardAppContainer">
+      <app-scorecard></app-scorecard>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,104 @@
+.mineSweeperContainerWrapper {
+    text-align: center;
+    font-family: "Poppins", sans-serif !important;
+    margin-top: 60px;
+}
+
+.heading {
+    text-align: center;
+    padding: 15px 15px 10px 15px;
+    font-weight: 600;
+    color: #feda6a;
+}
+
+.mineSweeperAndScorecardContainer {
+    display: flex;
+    padding: 0 25px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.mineSweeperContainer {
+    width: max-content;
+    height: max-content;
+    margin: 0 auto;
+    background: #c0c0c0;
+    padding: 20px;
+}
+
+.mineSweeper {
+    background: #282c34;
+    border-top: 2px solid #282c34;
+    border-right: 2px solid #282c34;
+    border-bottom: 2px solid #282c34;
+    border-left: 2px solid #282c34;
+    width: max-content;
+    height: max-content;
+}
+
+.mineSweeper__list {
+    display: flex;
+
+    &__items {
+        width: 38px;
+        height: 38px;
+        box-sizing: border-box;
+        list-style: none;
+    }
+}
+
+.scoreCardAppContainer {
+    margin: 20px 0;
+}
+
+.gameInfo {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 5px;
+    //background: #282c34;
+    //color: #feda6a;
+    border-radius: 10px;
+    border: 1px solid #282c34;
+
+    >div {
+        width: 30%;
+    }
+
+    &__stopwatch {        
+        display: flex;
+        flex-direction: column;
+        text-align: right;
+        .score {
+            margin-bottom: 5px;
+        }
+        .icon {
+            font-size: 22px;
+            margin-right: -2px;
+        }
+        span {
+            font-size: 16px;
+        }
+    }
+
+    img {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+    }
+}
+
+.resetContainer {
+    margin-top: 20px;
+    padding: 10px 5px;
+    font-size: 20px;
+
+    button {
+        border: 1px solid;
+        font-family: "Poppins", sans-serif !important;
+        color: #feda6a;
+        background: #282c34;
+    }
+}

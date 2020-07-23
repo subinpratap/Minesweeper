@@ -1,0 +1,50 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; }
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/*-----------------------Normalising Bootstrap CSS-------------------*/
+.row {
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+/*-----------------------Normalising Material CSS-------------------*/
+.mat-form-field-appearance-fill .mat-form-field-flex {
+        background-color: rgba(0,0,0,0);
+}
+
+.mat-form-field {
+    width: 100%;
+
+    input.mat-input-element.places {
+        padding-left: 10px;
+    }
+}
+
+.mat-dialog-container {
+    width: 400px;
+    height: 150px;    
+    font-family: "Poppins", sans-serif !important;
+    button {
+        background: #feda6a;
+    }
+}
+
+/*--------------------------------------------------------------------*/

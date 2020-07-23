@@ -1,0 +1,30 @@
+.notFoundPageWrapper {
+  height: 75vh;
+  text-align: center;
+  color: white;
+}
+.notFoundPage {
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  p {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  a {
+    cursor: pointer;
+    color: #feda6a;
+    font-size: 17px;
+    display: block;
+    margin-top: 30px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+.notFoundPage img {
+  width: 250px;
+  height: 250px;
+}

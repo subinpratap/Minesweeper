@@ -1,0 +1,26 @@
+<div class="loginContainerWrapper">
+  <div class="loginContainer d-flex justify-content-center align-items-center px-4">
+    <div class="formWrapper">
+      <h1 class="loginTitle font-weight-bold">Login</h1>
+      <form (ngSubmit)="loginForm.form.valid && login()" #loginForm="ngForm" class="loginForm">
+        <mat-form-field class="form-group">
+          <mat-label>Username</mat-label>
+          <input matInput type="text" required [(ngModel)]="loginFormData.username" #name="ngModel" name="username">
+          <mat-error *ngIf="name.invalid && (name.dirty || name.touched) || name.hasError('required')">
+            Please enter a username
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="form-group">
+          <mat-label>Password</mat-label>
+          <input matInput type="password" required [(ngModel)]="loginFormData.password" #pass="ngModel" name="password">
+          <mat-error *ngIf="pass.invalid && (pass.dirty || pass.touched) || name.hasError('required')">
+            Please enter a password
+          </mat-error>
+        </mat-form-field>
+
+        <button class="loginButton" mat-raised-button color="primary" type="submit">Login</button>
+      </form>
+    </div>
+  </div>
+</div>

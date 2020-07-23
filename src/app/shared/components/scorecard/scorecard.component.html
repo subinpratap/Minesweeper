@@ -1,0 +1,15 @@
+<div class="scoreCardContainer">
+  <span>Score History</span>
+  <div class="scoreCard">
+    <ul class="levels">
+      <li class="level">Easy</li>
+      <li class="level">Medium</li>
+      <li class="level">Hard</li>
+    </ul>
+    <ul class="scores" *ngFor="let index of arr">
+      <li class="score">{{ easy[index]? easy[index]: '-' }}</li>
+      <li class="score">{{ medium[index]? medium[index]: '-' }}</li>
+      <li class="score">{{ hard[index]? hard[index]: '-' }}</li>
+    </ul>
+  </div>
+</div>

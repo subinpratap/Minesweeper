@@ -1,0 +1,12 @@
+.messageContainer {
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    text-align: center;
+    z-index: 1;
+    top: 55px;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+}

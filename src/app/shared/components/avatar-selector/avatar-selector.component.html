@@ -1,0 +1,7 @@
+<section class="avatarContainer">
+  <p>Select an Avatar</p>
+  <div class="image" *ngFor="let avatar of avatarArray">
+    <img src='{{ "../../../../assets//images/avatar/av-" + avatar + ".jpeg" }}' alt="avatar" (click)="selectAvatar(avatar)"> 
+  </div>
+
+</section>

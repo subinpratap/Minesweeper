@@ -1,0 +1,4 @@
+<span class="tile" [ngClass]="{'hideOverlay': tileInfo.clicked}" *ngIf="tileInfo" (click)="revealTileFn()">
+  <span class="tile__text" *ngIf="!tileInfo.hasBomb">{{ tileInfo.value }}</span>
+  <i *ngIf="tileInfo.hasBomb" class="tile__image bomb icon"></i>
+</span>

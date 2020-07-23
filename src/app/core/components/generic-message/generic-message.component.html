@@ -1,0 +1,9 @@
+<div class="messageContainer" *ngIf="message?.heading">
+  <div class="ui message" [ngClass]="{'success': message.messageType == 'success', 'error': message.messageType == 'error', 'info': message.messageType == 'info' }">
+    <i class="close icon" (click)="hideBannerMessage()"></i>
+    <div class="header">
+      {{ message.heading }}
+    </div>
+    <p>{{ message?.description }}</p>
+  </div>
+</div>
