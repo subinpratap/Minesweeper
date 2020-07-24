@@ -1,7 +1,8 @@
 # Minesweeper
 
-Simplified Minesweeper Game
+Minesweeper Game
 -Followed a scalable project structure
+-Sample login page
 -Lazy Loading
 -Router Guards
 -Implemented re-usable components
