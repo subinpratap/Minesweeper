@@ -132,6 +132,9 @@ export class MinesweeperComponent implements OnInit {
       }
       this.mineSweeperArray[y][x]['clicked'] = true;
       this.mineSweeperArray[y][x]['value'] = (this.getBombsInSurroundingTiles(y, x) > 0) ? this.getBombsInSurroundingTiles(y, x): '';
+      if (this.mineSweeperArray[y][x]['value'] == '') {
+        this.processNeighbouringTiles(y,x);
+      }
     }  
   }
 
@@ -148,6 +151,42 @@ export class MinesweeperComponent implements OnInit {
     }
 
     return surroundingBombs;
+  }
+
+  processNeighbouringTiles(y: number, x:number): void {
+    console.log('process Neighbouring');
+    for (let i = 0; i < this.surroundingTiles.length; i++) {
+      let yShift = this.surroundingTiles[i][0];
+      let xShift = this.surroundingTiles[i][1];
+
+      if (this.mineSweeperArray[y + yShift] && this.mineSweeperArray[y + yShift][x + xShift] && !this.mineSweeperArray[y + yShift][x + xShift]['clicked']) {
+        this.revealNeighbouringTiles((y + yShift), (x + xShift));
+      }
+    }
+  }
+
+  revealNeighbouringTiles(y: number, x:number): void {
+    let surroundingBombs = 0;
+
+    for (let i = 0; i < this.surroundingTiles.length; i++) {
+      let yShift = this.surroundingTiles[i][0];
+      let xShift = this.surroundingTiles[i][1];
+
+      if (this.mineSweeperArray[y + yShift] && this.mineSweeperArray[y + yShift][x + xShift] && this.mineSweeperArray[y + yShift][x + xShift].hasBomb) {
+        surroundingBombs++;
+      }
+    }
+
+    this.mineSweeperArray[y][x]['clicked'] = true;
+
+    if(surroundingBombs > 0) {
+      this.mineSweeperArray[y][x]['value'] = surroundingBombs;
+    } else {
+      this.mineSweeperArray[y][x]['value'] = '';
+      this.processNeighbouringTiles(y, x);
+    }
+
+    this.score++;
   }
 
   revealAllBombs(): void {

@@ -23,7 +23,7 @@
     width: max-content;
     height: max-content;
     margin: 0 auto;
-    background: #c0c0c0;
+    background: #feda6a;
     padding: 20px;
 }
 
@@ -57,15 +57,15 @@
     justify-content: space-between;
     margin-bottom: 10px;
     padding: 5px;
-    //background: #282c34;
-    //color: #feda6a;
     border-radius: 10px;
     border: 1px solid #282c34;
+    background: #282c34;
 
     >div {
         width: 30%;
+        color: #feda6a;
     }
-
+    
     &__stopwatch {        
         display: flex;
         flex-direction: column;
@@ -102,3 +102,4 @@
         background: #282c34;
     }
 }
+

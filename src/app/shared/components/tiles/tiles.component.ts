@@ -13,6 +13,7 @@ export class TilesComponent implements OnInit {
   constructor() { }
 
   revealTileFn(): void {
+    //console.log('clicked', this.tileInfo.yIndex);
     if(!this.tileInfo.clicked) {
       this.revealTile.emit({
         y: this.tileInfo.yIndex,

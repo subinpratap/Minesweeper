@@ -48,3 +48,13 @@ ul {
 }
 
 /*--------------------------------------------------------------------*/
+
+.mineSweeperContainerWrapper {
+    .mat-select-value-text, .mat-select-arrow {
+        color: #feda6a !important;
+    }
+
+    .mat-form-field-underline {
+        background-color: #feda6a !important;
+    }
+}
