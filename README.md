@@ -1,6 +1,6 @@
 # Minesweeper
 
-Take a look: http://angularminesweeper.surge.sh/  
+Take a look: https://angularminesweeper.surge.sh/  
 
 Please use below credentials when asked to login:  
 username: admin  
